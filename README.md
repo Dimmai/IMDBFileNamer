@@ -1,4 +1,3 @@
-<#
 .SYNOPSIS
 Media processor that cleans, renames, and organizes downloaded video files into a structured library.
 
@@ -47,23 +46,23 @@ Debug mode that simulates all operations without modifying files. Default: $fals
 
 .EXAMPLE
 # Normal execution - process all downloads
-.\MediaProcessor.ps1
+.\IMDBRenameAndCopy.ps1
 
 .EXAMPLE
 # Process specific folder
-.\MediaProcessor.ps1 -folderPath "G:\Download\Complete\MovieName"
+.\IMDBRenameAndCopy.ps1 -folderPath "G:\Download\Complete\MovieName"
 
 .EXAMPLE
 # SafeRun debug mode (no files are modified)
-.\MediaProcessor.ps1 -EnableSafeRun $true
+.\IMDBRenameAndCopy.ps1 -EnableSafeRun $true
 
 .EXAMPLE
 # Disable logging, process specific folder
-.\MediaProcessor.ps1 -folderPath "G:\Downloads\TVShow" -EnableLogging $false
+.\IMDBRenameAndCopy.ps1 -folderPath "G:\Downloads\TVShow" -EnableLogging $false
 
 .EXAMPLE
 # qBittorrent completion call (add to qBittorrent "Run external program" on completion)
-powershell -File "D:\Applications\Imdb\MediaProcessor.ps1" "%F"
+powershell -File "D:\Applications\Imdb\IMDBRenameAndCopy.ps1" "%F"
 
 .NOTES
 Author     : Nadeem Ahmad
@@ -75,5 +74,4 @@ ShitList   : D:\Applications\Imdb\ShitList.txt
 
 To run from qBittorrent on download completion:
    In qBittorrent → Tools → Options → Downloads → "Run external program"
-   Add: powershell -File "D:\Applications\Imdb\MediaProcessor.ps1" "%F"
-#>
+   Add: powershell -File "D:\Applications\Imdb\IMDBRenameAndCopy.ps1" "%F"

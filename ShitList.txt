@@ -1,4 +1,4 @@
-﻿# ShitList - Auto-generated on 2026-04-08 22:51:02
+# ShitList - Auto-generated on 2026-04-08 23:17:38
 # Words in this list will be removed from filenames
 # Add one word per line, lines starting with # are ignored
 # ------------------------------------------------------------
@@ -18,11 +18,13 @@ _
 1080p
 10bit
 10-bit
+2.0
 2160p
 2ch
 360p
 480p
 4k
+5.1
 51
 5ch
 6ch
@@ -159,6 +161,7 @@ web-dl
 webrip
 -wiki
 workprint
+world
 x264
 x265
 xvid

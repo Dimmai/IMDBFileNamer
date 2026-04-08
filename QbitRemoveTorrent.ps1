@@ -45,8 +45,8 @@ replace with a secure credential mechanism if needed.
 
 # CONFIG
 # WebUI credentials
-$Username = 'Nadeem Ahmad'
-$Password = 'Nbronxnade69!'
+$Username = 'username'
+$Password = 'pw'
 
 # Torrents removed if completed this many minutes ago or older
 $PruneAfterMins = 0  # Change to desired minutes (e.g., 60 = 1 hour)

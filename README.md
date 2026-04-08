@@ -16,7 +16,7 @@ This script processes completed downloads from qBittorrent by:
 3. EXTRACTING METADATA - Pulls title and year from filenames, and for TV shows,
    parses season and episode numbers.
 
-4. VERIFYING (OPTIONAL) - Checks OMDB API to confirm movies exist before processing.
+4. VERIFYING (OPTIONAL) - Checks IMDB API to confirm movies exist before processing.
 
 5. ORGANIZING - Copies files to appropriate library folders:
    - Movies:      F:\Movies\<Year>\Movie Title (Year).ext

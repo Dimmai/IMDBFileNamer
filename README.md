@@ -1,7 +1,7 @@
-.SYNOPSIS
+SYNOPSIS
 Media processor that cleans, renames, and organizes downloaded video files into a structured library.
 
-.DESCRIPTION
+DESCRIPTION
 This script processes completed downloads from qBittorrent by:
 
 1. CLEANING FILENAMES - Removes junk like release groups, codecs (x264/HEVC), 
@@ -32,39 +32,39 @@ Safety features include mutex locking (prevents multiple instances), SafeRun deb
 (simulates all operations), drive restrictions (blocks F: drive), and interactive 
 conflict resolution for existing files.
 
-.PARAMETER folderPath
+PARAMETER folderPath
 Root folder containing completed downloads to process. Default: G:\Download\Download\Complete
 
-.PARAMETER UseMetadataTitleFirst
+PARAMETER UseMetadataTitleFirst
 Reserved parameter for future use. Default: $false
 
-.PARAMETER EnableLogging
+PARAMETER EnableLogging
 Enables logging to error_log.txt. Default: $true
 
-.PARAMETER EnableSafeRun
+PARAMETER EnableSafeRun
 Debug mode that simulates all operations without modifying files. Default: $false
 
-.EXAMPLE
+EXAMPLE
 # Normal execution - process all downloads
 .\IMDBRenameAndCopy.ps1
 
-.EXAMPLE
+EXAMPLE
 # Process specific folder
 .\IMDBRenameAndCopy.ps1 -folderPath "G:\Download\Complete\MovieName"
 
-.EXAMPLE
+EXAMPLE
 # SafeRun debug mode (no files are modified)
 .\IMDBRenameAndCopy.ps1 -EnableSafeRun $true
 
-.EXAMPLE
+EXAMPLE
 # Disable logging, process specific folder
 .\IMDBRenameAndCopy.ps1 -folderPath "G:\Downloads\TVShow" -EnableLogging $false
 
-.EXAMPLE
+EXAMPLE
 # qBittorrent completion call (add to qBittorrent "Run external program" on completion)
 powershell -File "D:\Applications\Imdb\IMDBRenameAndCopy.ps1" "%F"
 
-.NOTES
+NOTES
 Author     : Nadeem Ahmad
 Created    : 2026-03-09
 Purpose    : Automated media library organization for torrent downloads

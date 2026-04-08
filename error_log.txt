@@ -1,0 +1,197 @@
+2026-04-01 22:22:01 - ---------------------------- ?? Starting folder processing...
+2026-04-01 22:22:01 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-01 22:22:01 - ?? DEBUG MODE — No files will be copied, renamed, deleted, or moved.
+2026-04-01 22:22:01 - ?? Processing Folder: G:\Download\Download\ToBeDeleted\www.UIndex.org    -    Wuthering Heights (2026) 1080p WEBRip x265 10bit 5.1-LAMA
+2026-04-01 22:22:02 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-01 22:22:02 - ?? Movie ? Would go to: F:\Movies\2026
+2026-04-01 22:22:02 - ?? [DEBUG] 'Wuthering.Heights.2026.1080p.WEBRip.x265.10bit.AAC5.1-LAMA.mkv' ? 'Wuthering Heights (2026).mkv'
+2026-04-01 22:22:02 - ?? Finished folder processing.
+2026-04-01 22:22:31 - ---------------------------- ?? Starting folder processing...
+2026-04-01 22:22:31 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-01 22:22:31 - ?? Processing Folder: G:\Download\Download\ToBeDeleted\www.UIndex.org    -    Wuthering Heights (2026) 1080p WEBRip x265 10bit 5.1-LAMA
+2026-04-01 22:22:31 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-01 22:22:31 - ?? Movie ? Would go to: F:\Movies\2026
+2026-04-01 22:22:31 - ?? Renamed: Wuthering.Heights.2026.1080p.WEBRip.x265.10bit.AAC5.1-LAMA.mkv ? Wuthering Heights (2026).mkv
+2026-04-01 22:22:49 - ? Copy completed: F:\Movies\2026\Wuthering Heights (2026).mkv
+2026-04-01 22:22:49 - ? Copy verified: Wuthering Heights (2026).mkv
+2026-04-01 22:22:49 - ??? Deleted source file: G:\Download\Download\ToBeDeleted\www.UIndex.org    -    Wuthering Heights (2026) 1080p WEBRip x265 10bit 5.1-LAMA\Wuthering Heights (2026).mkv
+2026-04-01 22:22:49 - ?? Only junk files remain — moving folder to ToBeDeleted.
+2026-04-01 22:22:49 - ??? Moved processed folder to ToBeDeleted: www.UIndex.org    -    Wuthering Heights (2026) 1080p WEBRip x265 10bit 5.1-LAMA-20260401222249
+2026-04-01 22:22:49 - ?? Finished folder processing.
+2026-04-08 21:47:42 - ---------------------------- ?? Starting folder processing...
+2026-04-08 21:47:42 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 21:47:42 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 21:47:42 - ?? Series ? Would go to: F:\Serier\The Boys\Season 5
+2026-04-08 21:47:42 - ?? Renamed: The.Boys.S05E01.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv ? The Boys S05E01.mkv
+2026-04-08 21:47:42 - ?? Created folder: F:\Serier\The Boys\Season 5
+2026-04-08 21:47:47 - ? Copy completed: F:\Serier\The Boys\Season 5\The Boys S05E01.mkv
+2026-04-08 21:47:47 - ? Copy verified: The Boys S05E01.mkv
+2026-04-08 21:47:47 - ??? Deleted source file: G:\Download\Download\Complete\The Boys S05E01.mkv
+2026-04-08 21:47:47 - ?? Finished folder processing.
+2026-04-08 21:47:50 - ---------------------------- ?? Starting folder processing...
+2026-04-08 21:47:50 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 21:47:51 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 21:47:51 - ?? Series ? Would go to: F:\Serier\The Boys\Season 5
+2026-04-08 21:47:51 - ?? Renamed: The.Boys.S05E02.1080p.HEVC.x265-MeGusta[EZTVx.to].mkv ? The Boys S05E02.mkv
+2026-04-08 21:47:55 - ? Copy completed: F:\Serier\The Boys\Season 5\The Boys S05E02.mkv
+2026-04-08 21:47:55 - ? Copy verified: The Boys S05E02.mkv
+2026-04-08 21:47:55 - ??? Deleted source file: G:\Download\Download\Complete\The Boys S05E02.mkv
+2026-04-08 21:47:55 - ?? Finished folder processing.
+2026-04-08 21:49:05 - ---------------------------- ?? Starting folder processing...
+2026-04-08 21:49:05 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 21:49:05 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 21:49:05 - ?? Processing Folder: G:\Download\Download\Complete\www.UIndex.org    -    Marshals.S01E06.1080p.HEVC.x265-MeGusta
+2026-04-08 21:49:05 - ?? Series ? Would go to: F:\Serier\Marshals\Season 1
+2026-04-08 21:49:05 - ?? Renamed: Marshals.S01E06.1080p.HEVC.x265-MeGusta.mkv ? Marshals S01E06.mkv
+2026-04-08 21:49:08 - ? Copy completed: F:\Serier\Marshals\Season 1\Marshals S01E06.mkv
+2026-04-08 21:49:08 - ? Copy verified: Marshals S01E06.mkv
+2026-04-08 21:49:08 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    Marshals.S01E06.1080p.HEVC.x265-MeGusta\Marshals S01E06.mkv
+2026-04-08 21:49:08 - ?? Only junk files remain — moving folder to ToBeDeleted.
+2026-04-08 21:49:08 - ??? Moved processed folder to ToBeDeleted: www.UIndex.org    -    Marshals.S01E06.1080p.HEVC.x265-MeGusta
+2026-04-08 21:49:08 - ?? Finished folder processing.
+2026-04-08 21:53:54 - ---------------------------- ?? Starting folder processing...
+2026-04-08 21:53:54 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 21:53:54 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 21:53:54 - ?? Processing Folder: G:\Download\Download\Complete\www.UIndex.org    -    The Virgin Of The Quarry Lake (2025) 1080p WEBRip x265 10bit 5.1-WORLD
+2026-04-08 21:53:55 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 21:53:55 - ?? Movie ? Would go to: F:\Movies\2025
+2026-04-08 21:53:55 - ?? Renamed: The.Virgin.Of.The.Quarry.Lake.2025.1080p.WEBRip.x265.10bit.AAC5.1-WORLD.mp4 ? The Virgin Of The Quarry Lake (2025).mp4
+2026-04-08 21:54:10 - ? Copy completed: F:\Movies\2025\The Virgin Of The Quarry Lake (2025).mp4
+2026-04-08 21:54:10 - ? Copy verified: The Virgin Of The Quarry Lake (2025).mp4
+2026-04-08 21:54:10 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 21:54:10 - ?? Movie (Subtitle) ? Would go to: F:\Movies\2025
+2026-04-08 21:54:10 - ?? Renamed: The.Virgin.Of.The.Quarry.Lake.2025.1080p.WEBRip.x265.10bit.AAC5.1-WORLD.srt ? The Virgin Of The Quarry Lake (2025).srt
+2026-04-08 21:54:10 - ? Copied subtitle: The Virgin Of The Quarry Lake (2025).srt
+2026-04-08 21:54:10 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    The Virgin Of The Quarry Lake (2025) 1080p WEBRip x265 10bit 5.1-WORLD\The Virgin Of The Quarry Lake (2025).mp4
+2026-04-08 21:54:10 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    The Virgin Of The Quarry Lake (2025) 1080p WEBRip x265 10bit 5.1-WORLD\The Virgin Of The Quarry Lake (2025).srt
+2026-04-08 21:54:10 - ?? Only junk files remain — moving folder to ToBeDeleted.
+2026-04-08 21:54:10 - ??? Moved processed folder to ToBeDeleted: www.UIndex.org    -    The Virgin Of The Quarry Lake (2025) 1080p WEBRip x265 10bit 5.1-WORLD
+2026-04-08 21:54:10 - ?? Finished folder processing.
+2026-04-08 21:55:26 - ---------------------------- ?? Starting folder processing...
+2026-04-08 21:55:26 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 21:55:26 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 21:55:26 - ?? Processing Folder: G:\Download\Download\Complete\www.UIndex.org    -    U Are The Universe (2024) 1080p WEBRip x265 10bit 5.1-WORLD
+2026-04-08 21:55:27 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 21:55:27 - ?? Movie ? Would go to: F:\Movies\2024
+2026-04-08 21:55:27 - ?? Renamed: U.Are.The.Universe.2024.1080p.WEBRip.x265.10bit.AAC5.1-WORLD.mp4 ? U Are The Universe (2024).mp4
+2026-04-08 21:55:38 - ? Copy completed: F:\Movies\2024\U Are The Universe (2024).mp4
+2026-04-08 21:55:38 - ? Copy verified: U Are The Universe (2024).mp4
+2026-04-08 21:55:38 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 21:55:38 - ?? Movie (Subtitle) ? Would go to: F:\Movies\2024
+2026-04-08 21:55:38 - ?? Renamed: U.Are.The.Universe.2024.1080p.WEBRip.x265.10bit.AAC5.1-WORLD.srt ? U Are The Universe (2024).srt
+2026-04-08 21:55:38 - ? Copied subtitle: U Are The Universe (2024).srt
+2026-04-08 21:55:38 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    U Are The Universe (2024) 1080p WEBRip x265 10bit 5.1-WORLD\U Are The Universe (2024).mp4
+2026-04-08 21:55:38 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    U Are The Universe (2024) 1080p WEBRip x265 10bit 5.1-WORLD\U Are The Universe (2024).srt
+2026-04-08 21:55:38 - ?? Only junk files remain — moving folder to ToBeDeleted.
+2026-04-08 21:55:38 - ??? Moved processed folder to ToBeDeleted: www.UIndex.org    -    U Are The Universe (2024) 1080p WEBRip x265 10bit 5.1-WORLD
+2026-04-08 21:55:38 - ?? Finished folder processing.
+2026-04-08 21:58:30 - ---------------------------- ?? Starting folder processing...
+2026-04-08 21:58:30 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 21:58:30 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 21:58:30 - ?? Processing Folder: G:\Download\Download\Complete\www.UIndex.org    -    Mercy (2026) 1080p WEBRip x265 10bit 5.1-LAMA
+2026-04-08 21:58:30 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 21:58:30 - ?? Movie ? Would go to: F:\Movies\2026
+2026-04-08 21:58:30 - ?? Renamed: Mercy.2026.1080p.WEBRip.x265.10bit.AAC5.1-LAMA.mp4 ? Mercy (2026).mp4
+2026-04-08 21:59:38 - ? Copy completed: F:\Movies\2026\Mercy (2026).mp4
+2026-04-08 21:59:38 - ? Copy verified: Mercy (2026).mp4
+2026-04-08 21:59:38 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 21:59:38 - ?? Movie (Subtitle) ? Would go to: F:\Movies\2026
+2026-04-08 21:59:38 - ?? Renamed: Mercy.2026.1080p.WEBRip.x265.10bit.AAC5.1-LAMA.srt ? Mercy (2026).srt
+2026-04-08 21:59:38 - ? Copied subtitle: Mercy (2026).srt
+2026-04-08 21:59:38 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    Mercy (2026) 1080p WEBRip x265 10bit 5.1-LAMA\Mercy (2026).mp4
+2026-04-08 21:59:38 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    Mercy (2026) 1080p WEBRip x265 10bit 5.1-LAMA\Mercy (2026).srt
+2026-04-08 21:59:38 - ?? Only junk files remain — moving folder to ToBeDeleted.
+2026-04-08 21:59:38 - ??? Moved processed folder to ToBeDeleted: www.UIndex.org    -    Mercy (2026) 1080p WEBRip x265 10bit 5.1-LAMA
+2026-04-08 21:59:38 - ?? Finished folder processing.
+2026-04-08 22:09:20 - ---------------------------- ?? Starting folder processing...
+2026-04-08 22:09:20 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 22:09:20 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 22:09:21 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 22:09:21 - ?? Movie ? Would go to: F:\Movies\2026
+2026-04-08 22:09:21 - ?? Renamed: Scream 7 2026 1080p (Multi) WEB-DL HEVC x265 5.1 BONE.mkv ? Scream BONE (2026).mkv
+2026-04-08 22:09:32 - ? Copy completed: F:\Movies\2026\Scream BONE (2026).mkv
+2026-04-08 22:09:32 - ? Copy verified: Scream BONE (2026).mkv
+2026-04-08 22:09:32 - ??? Deleted source file: G:\Download\Download\Complete\Scream BONE (2026).mkv
+2026-04-08 22:09:32 - ?? Finished folder processing.
+2026-04-08 22:18:39 - ---------------------------- ?? Starting folder processing...
+2026-04-08 22:18:39 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 22:18:39 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 22:18:39 - ?? Processing Folder: G:\Download\Download\Complete\www.UIndex.org    -    Mike Nick Nick Alice (2026) 1080p WEBRip x265 10bit 5.1-LAMA
+2026-04-08 22:18:39 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 22:18:39 - ?? Movie ? Would go to: F:\Movies\2026
+2026-04-08 22:18:39 - ?? Renamed: Mike.Nick.Nick.Alice.2026.1080p.WEBRip.x265.10bit.AAC5.1-LAMA.mp4 ? Mike Nick Nick Alice (2026).mp4
+2026-04-08 22:18:52 - ? Copy completed: F:\Movies\2026\Mike Nick Nick Alice (2026).mp4
+2026-04-08 22:18:52 - ? Copy verified: Mike Nick Nick Alice (2026).mp4
+2026-04-08 22:18:52 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 22:18:52 - ?? Movie (Subtitle) ? Would go to: F:\Movies\2026
+2026-04-08 22:18:52 - ?? Renamed: Mike.Nick.Nick.Alice.2026.1080p.WEBRip.x265.10bit.AAC5.1-LAMA.srt ? Mike Nick Nick Alice (2026).srt
+2026-04-08 22:18:52 - ? Copied subtitle: Mike Nick Nick Alice (2026).srt
+2026-04-08 22:18:52 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    Mike Nick Nick Alice (2026) 1080p WEBRip x265 10bit 5.1-LAMA\Mike Nick Nick Alice (2026).mp4
+2026-04-08 22:18:52 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    Mike Nick Nick Alice (2026) 1080p WEBRip x265 10bit 5.1-LAMA\Mike Nick Nick Alice (2026).srt
+2026-04-08 22:18:52 - ?? Only junk files remain — moving folder to ToBeDeleted.
+2026-04-08 22:18:52 - ??? Moved processed folder to ToBeDeleted: www.UIndex.org    -    Mike Nick Nick Alice (2026) 1080p WEBRip x265 10bit 5.1-LAMA
+2026-04-08 22:18:52 - ?? Finished folder processing.
+2026-04-08 22:20:26 - ---------------------------- ?? Starting folder processing...
+2026-04-08 22:20:26 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 22:20:26 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 22:20:26 - ?? Processing Folder: G:\Download\Download\Complete\www.UIndex.org    -    How To Make A Killing (2026) 1080p WEBRip x265 10bit 5.1-LAMA
+2026-04-08 22:20:27 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 22:20:27 - ?? Movie ? Would go to: F:\Movies\2026
+2026-04-08 22:20:27 - ?? Renamed: How.To.Make.A.Killing.2026.1080p.WEBRip.x265.10bit.AAC5.1-LAMA.mp4 ? How To Make A Killing (2026).mp4
+2026-04-08 22:20:38 - ? Copy completed: F:\Movies\2026\How To Make A Killing (2026).mp4
+2026-04-08 22:20:38 - ? Copy verified: How To Make A Killing (2026).mp4
+2026-04-08 22:20:38 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 22:20:38 - ?? Movie (Subtitle) ? Would go to: F:\Movies\2026
+2026-04-08 22:20:38 - ?? Renamed: How.To.Make.A.Killing.2026.1080p.WEBRip.x265.10bit.AAC5.1-LAMA.srt ? How To Make A Killing (2026).srt
+2026-04-08 22:20:38 - ? Copied subtitle: How To Make A Killing (2026).srt
+2026-04-08 22:20:38 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    How To Make A Killing (2026) 1080p WEBRip x265 10bit 5.1-LAMA\How To Make A Killing (2026).mp4
+2026-04-08 22:20:38 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    How To Make A Killing (2026) 1080p WEBRip x265 10bit 5.1-LAMA\How To Make A Killing (2026).srt
+2026-04-08 22:20:38 - ?? Only junk files remain — moving folder to ToBeDeleted.
+2026-04-08 22:20:38 - ??? Moved processed folder to ToBeDeleted: www.UIndex.org    -    How To Make A Killing (2026) 1080p WEBRip x265 10bit 5.1-LAMA
+2026-04-08 22:20:38 - ?? Finished folder processing.
+2026-04-08 22:22:30 - ---------------------------- ?? Starting folder processing...
+2026-04-08 22:22:30 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 22:22:30 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 22:22:30 - ?? Processing Folder: G:\Download\Download\Complete\www.UIndex.org    -    Pretty Lethal (2026) 1080p WEBRip 5.1-LAMA
+2026-04-08 22:22:31 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 22:22:31 - ?? Movie ? Would go to: F:\Movies\2026
+2026-04-08 22:22:31 - ?? Renamed: Pretty.Lethal.2026.1080p.WEBRip.x264.AAC5.1-LAMA.mp4 ? Pretty Lethal (2026).mp4
+2026-04-08 22:22:41 - ? Copy completed: F:\Movies\2026\Pretty Lethal (2026).mp4
+2026-04-08 22:22:41 - ? Copy verified: Pretty Lethal (2026).mp4
+2026-04-08 22:22:41 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 22:22:41 - ?? Movie (Subtitle) ? Would go to: F:\Movies\2026
+2026-04-08 22:22:41 - ?? Renamed: Pretty.Lethal.2026.1080p.WEBRip.x264.AAC5.1-LAMA.srt ? Pretty Lethal (2026).srt
+2026-04-08 22:22:42 - ? Copied subtitle: Pretty Lethal (2026).srt
+2026-04-08 22:22:42 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    Pretty Lethal (2026) 1080p WEBRip 5.1-LAMA\Pretty Lethal (2026).mp4
+2026-04-08 22:22:42 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    Pretty Lethal (2026) 1080p WEBRip 5.1-LAMA\Pretty Lethal (2026).srt
+2026-04-08 22:22:42 - ?? Only junk files remain — moving folder to ToBeDeleted.
+2026-04-08 22:22:42 - ??? Moved processed folder to ToBeDeleted: www.UIndex.org    -    Pretty Lethal (2026) 1080p WEBRip 5.1-LAMA
+2026-04-08 22:22:42 - ?? Finished folder processing.
+2026-04-08 22:27:15 - ---------------------------- ?? Starting folder processing...
+2026-04-08 22:27:15 - ?? Cleaned ShitList - now contains 17 unique words
+2026-04-08 22:27:15 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 22:27:15 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 22:27:15 - ?? Movie ? Would go to: F:\Movies\2026
+2026-04-08 22:27:15 - ?? Renamed: Send.Help.2026.1080p.WEBRip.AAC5.1.10bits.x265-Rapta.mkv ? Send Help 10bits (2026).mkv
+2026-04-08 22:27:27 - ? Copy completed: F:\Movies\2026\Send Help 10bits (2026).mkv
+2026-04-08 22:27:27 - ? Copy verified: Send Help 10bits (2026).mkv
+2026-04-08 22:27:27 - ??? Deleted source file: G:\Download\Download\Complete\Send Help 10bits (2026).mkv
+2026-04-08 22:27:27 - ?? Finished folder processing.
+2026-04-08 22:51:02 - ---------------------------- ?? Starting folder processing...
+2026-04-08 22:51:02 - ?? Cleaned ShitList - now contains 162 unique words
+2026-04-08 22:51:02 - ?? Processing Folder: G:\Download\Download\Complete
+2026-04-08 22:51:02 - ?? Processing Folder: G:\Download\Download\Complete\www.UIndex.org    -    Dream Team (2026) 1080p WEBRip 5.1-WORLD
+2026-04-08 22:51:02 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 22:51:02 - ?? Movie ? Destination: F:\Movies\2026
+2026-04-08 22:51:02 - ?? Renamed: Dream.Team.2026.1080p.WEBRip.x264.AAC5.1-WORLD.mp4 ? Dream Team AAC5 -WORLD (2026).mp4
+2026-04-08 22:51:16 - ? Copy completed: F:\Movies\2026\Dream Team AAC5 -WORLD (2026).mp4
+2026-04-08 22:51:16 - ? Copy verified: Dream Team AAC5 -WORLD (2026).mp4
+2026-04-08 22:51:16 - ?? IMDB lookup failed: The remote server returned an error: (401) Unauthorized.
+2026-04-08 22:51:16 - ?? Movie (Subtitle) ? Destination: F:\Movies\2026
+2026-04-08 22:51:16 - ?? Renamed: Dream.Team.2026.1080p.WEBRip.x264.AAC5.1-WORLD.srt ? Dream Team AAC5 -WORLD (2026).srt
+2026-04-08 22:51:17 - ? Copied subtitle: Dream Team AAC5 -WORLD (2026).srt
+2026-04-08 22:51:17 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    Dream Team (2026) 1080p WEBRip 5.1-WORLD\Dream Team AAC5 -WORLD (2026).mp4
+2026-04-08 22:51:17 - ??? Deleted source file: G:\Download\Download\Complete\www.UIndex.org    -    Dream Team (2026) 1080p WEBRip 5.1-WORLD\Dream Team AAC5 -WORLD (2026).srt
+2026-04-08 22:51:17 - ?? Only junk files remain — moving folder to ToBeDeleted.
+2026-04-08 22:51:17 - ??? Moved processed folder to ToBeDeleted: www.UIndex.org    -    Dream Team (2026) 1080p WEBRip 5.1-WORLD
+2026-04-08 22:51:17 - ?? Finished folder processing.

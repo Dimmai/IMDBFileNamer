@@ -6,7 +6,7 @@ This script processes completed downloads from qBittorrent by:
 
 1. CLEANING FILENAMES - Removes junk like release groups, codecs (x264/HEVC), 
    resolutions (1080p/4K), audio tags (DTS/AC3), and language markers using a 
-   configurable ShitList that learns over time.
+   configurable ShitList that learns over time. 
 
 2. DETECTING CONTENT TYPE - Identifies whether a file is:
    - Movie (standard film)

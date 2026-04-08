@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 Media processor that cleans, renames, and organizes downloaded video files into a structured library.
 
@@ -33,17 +33,56 @@ Safety features include mutex locking (prevents multiple instances), SafeRun deb
 (simulates all operations), drive restrictions (blocks F: drive), and interactive 
 conflict resolution for existing files.
 
+.PARAMETER folderPath
+Root folder containing completed downloads to process. Default: G:\Download\Download\Complete
+
+.PARAMETER UseMetadataTitleFirst
+Reserved parameter for future use. Default: $false
+
+.PARAMETER EnableLogging
+Enables logging to error_log.txt. Default: $true
+
+.PARAMETER EnableSafeRun
+Debug mode that simulates all operations without modifying files. Default: $false
+
+.EXAMPLE
+# Normal execution - process all downloads
+.\IMDBRenameAndCopy.ps1
+
+.EXAMPLE
+# Process specific folder
+.\IMDBRenameAndCopy.ps1 -folderPath "G:\Download\Complete\MovieName"
+
+.EXAMPLE
+# SafeRun debug mode (no files are modified)
+.\IMDBRenameAndCopy.ps1 -EnableSafeRun $true
+
+.EXAMPLE
+# Disable logging, process specific folder
+.\IMDBRenameAndCopy.ps1 -folderPath "G:\Downloads\TVShow" -EnableLogging $false
+
+.EXAMPLE
+# qBittorrent completion call (add to qBittorrent "Run external program" on completion)
+powershell -File "D:\Applications\Imdb\IMDBRenameAndCopy.ps1" "%F"
+
 .NOTES
-Author: Nadeem Ahmad
-Purpose: Automated media library organization for torrent downloads
-ShitList: Auto-learns unwanted words from bracket content [like this]
+Author     : Nadeem Ahmad
+Created    : 2026-03-09
+Purpose    : Automated media library organization for torrent downloads
+ShitList   : Auto-learns unwanted words from bracket content [like this]
+Log file   : D:\Applications\Imdb\error_log.txt
+ShitList   : D:\Applications\Imdb\ShitList.txt
+
+To run from qBittorrent on download completion:
+   In qBittorrent → Tools → Options → Downloads → "Run external program"
+   Add: powershell -File "D:\Applications\Imdb\IMDBRenameAndCopy.ps1" "%F"
 #>
 
 param (
     [string]$folderPath = "G:\Download\Download\Complete",
     [bool]$UseMetadataTitleFirst = $false,     
     [bool]$EnableLogging = $true,
-    [bool]$EnableSafeRun = $false
+    [bool]$EnableSafeRun = $true
 )
 
 # ---------------------- DEBUG ----------------------
@@ -217,59 +256,79 @@ function Cleanup-ShitList {
 function GetCleanTitle {
     param([string]$title)
     
+    # PRESERVE YEAR EARLY - save it before we do heavy cleaning
+    $year = "Unknown"
+    if ($title -match '\b(19|20)\d{2}\b') {
+        $year = $matches[0]
+    }
+    
     # Step 1: Extract and learn from bracket content
     $bracketMatches = [regex]::Matches($title, '\[([^\]]*)\]')
     foreach ($match in $bracketMatches) {
         $content = $match.Groups[1].Value
-        # Split by common delimiters to get individual words
         $content -split '[\.\s_,-]' | ForEach-Object {
             if ($_.Length -gt 1 -and $_ -notmatch '^\d+$') {
-                Update-ShitList $_
+                $cleanWord = $_ -replace '[\d\.]', ''  # Remove digits and dots
+                if ($cleanWord.Length -gt 1) {
+                    Update-ShitList $cleanWord
+                }
             }
         }
     }
     
-    # Step 2: Remove brackets and their contents
+    # Step 2: Remove brackets and parentheses
     $title = $title -replace '\[[^\]]*\]', ''
-    $title = $title -replace '\([^\)]*\)', ''  # Also remove parentheses content
+    $title = $title -replace '\([^\)]*\)', ''
     
     # Step 3: Replace dots and underscores with spaces
     $title = $title -replace '[._]', ' '
     
-    # Step 4: Apply ShitList filtering (primary mechanism)
+    # Step 4: Aggressive removal of common patterns
+    # Remove audio codec patterns (AAC5.1, AAC5, AC3, DTS, etc.)
+    $title = $title -replace '(?i)\b(?:AAC|AC3|DTS|MP3|EAC3|TRUEHD)[\d\.]*\b', ''
+    # Remove resolution patterns
+    $title = $title -replace '(?i)\b\d{3,4}p\b', ''
+    # Remove source patterns
+    $title = $title -replace '(?i)\b(?:WEBRip|WEB-DL|BluRay|HDRip|BRRip|DVDRip)\b', ''
+    # Remove codec patterns
+    $title = $title -replace '(?i)\b(?:x264|x265|HEVC|AVC|AV1)\b', ''
+    # Remove release group (dash followed by uppercase word at end)
+    $title = $title -replace '\s*-\s*[A-Z0-9]+$', ''
+    $title = $title -replace '\s*-\s*[A-Z0-9]+\s*$', ''
+    
+    # Step 5: Apply ShitList
     foreach ($badWord in $global:ShitList) {
-        # Match whole words or words with common separators
-        $pattern = '(?i)(^|[\s\._-])' + [regex]::Escape($badWord) + '($|[\s\._-])'
+        $pattern = '(?i)(^|[\s])' + [regex]::Escape($badWord) + '($|[\s])'
         $title = $title -replace $pattern, ' '
     }
     
-    # Step 5: Remove remaining special characters (except year digits and spaces)
-    $title = $title -replace '[!?@#$%^&*=+|\\/<>:;"]', ' '
+    # Step 6: Clean up special characters
+    $title = $title -replace '[!?@#$%^&*=+|\\/<>:;",]', ' '
     
-    # Step 6: Remove standalone single characters (except possibly 'A' or 'I')
-    $title = $title -replace '\b(?!\b[AI]\b)\w\b', ''
+    # Step 7: Remove leftover standalone letters/numbers
+    $title = $title -replace '\s+\w\s+', ' '
+    $title = $title -replace '^\w\s+', ''
+    $title = $title -replace '\s+\w$', ''
     
-    # Step 7: Remove extra spaces and clean up
+    # Step 8: Collapse spaces and trim
     $title = $title -replace '\s+', ' '
     $title = $title.Trim()
-    $title = $title -replace '^\s*-\s*', ''
-    $title = $title -replace '\s*-\s*$', ''
     
-    # Step 8: Extract year if present
-    $year = "Unknown"
-    if ($title -match '\b(19|20)\d{2}\b') {
-        $year = $matches[0]
+    # Step 9: Remove any trailing dash
+    $title = $title -replace '\s*-\s*$', ''
+    $title = $title -replace '^\s*-\s*', ''
+    
+    # Step 10: Clean up double spaces again
+    $title = $title -replace '\s+', ' '
+    $title = $title.Trim()
+    
+    # Step 11: Remove year from title if present (we saved it earlier)
+    if ($year -ne "Unknown") {
         $title = $title -replace "\b$year\b", ''
-        $title = $title -replace '\(\s*\)', ''
         $title = $title -replace '\s+', ' '
         $title = $title.Trim()
     }
     
-    # Step 9: Final cleanup - remove any remaining weirdness
-    $title = $title -replace '^\W+|\W+$', ''
-    $title = $title -replace '\s+', ' '
-    
-    # Don't return empty titles
     if (-not $title) { $title = "Unknown Title" }
     
     return @($title, $year)

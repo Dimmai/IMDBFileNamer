@@ -1,4 +1,5 @@
-# IMDBFileNamer
+<#
+.SYNOPSIS
 Media processor that cleans, renames, and organizes downloaded video files into a structured library.
 
 .DESCRIPTION
@@ -16,7 +17,7 @@ This script processes completed downloads from qBittorrent by:
 3. EXTRACTING METADATA - Pulls title and year from filenames, and for TV shows,
    parses season and episode numbers.
 
-4. VERIFYING (OPTIONAL) - Checks IMDB API to confirm movies exist before processing.
+4. VERIFYING (OPTIONAL) - Checks OMDB API to confirm movies exist before processing.
 
 5. ORGANIZING - Copies files to appropriate library folders:
    - Movies:      F:\Movies\<Year>\Movie Title (Year).ext
@@ -32,7 +33,47 @@ Safety features include mutex locking (prevents multiple instances), SafeRun deb
 (simulates all operations), drive restrictions (blocks F: drive), and interactive 
 conflict resolution for existing files.
 
+.PARAMETER folderPath
+Root folder containing completed downloads to process. Default: G:\Download\Download\Complete
+
+.PARAMETER UseMetadataTitleFirst
+Reserved parameter for future use. Default: $false
+
+.PARAMETER EnableLogging
+Enables logging to error_log.txt. Default: $true
+
+.PARAMETER EnableSafeRun
+Debug mode that simulates all operations without modifying files. Default: $false
+
+.EXAMPLE
+# Normal execution - process all downloads
+.\MediaProcessor.ps1
+
+.EXAMPLE
+# Process specific folder
+.\MediaProcessor.ps1 -folderPath "G:\Download\Complete\MovieName"
+
+.EXAMPLE
+# SafeRun debug mode (no files are modified)
+.\MediaProcessor.ps1 -EnableSafeRun $true
+
+.EXAMPLE
+# Disable logging, process specific folder
+.\MediaProcessor.ps1 -folderPath "G:\Downloads\TVShow" -EnableLogging $false
+
+.EXAMPLE
+# qBittorrent completion call (add to qBittorrent "Run external program" on completion)
+powershell -File "D:\Applications\Imdb\MediaProcessor.ps1" "%F"
+
 .NOTES
-Author: Nadeem Ahmad
-Purpose: Automated media library organization for torrent downloads
-ShitList: Auto-learns unwanted words from bracket content [like this]
+Author     : Nadeem Ahmad
+Created    : 2026-03-09
+Purpose    : Automated media library organization for torrent downloads
+ShitList   : Auto-learns unwanted words from bracket content [like this]
+Log file   : D:\Applications\Imdb\error_log.txt
+ShitList   : D:\Applications\Imdb\ShitList.txt
+
+To run from qBittorrent on download completion:
+   In qBittorrent → Tools → Options → Downloads → "Run external program"
+   Add: powershell -File "D:\Applications\Imdb\MediaProcessor.ps1" "%F"
+#>

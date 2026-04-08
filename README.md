@@ -1,77 +1,176 @@
-SYNOPSIS
-Media processor that cleans, renames, and organizes downloaded video files into a structured library.
+# IMDBRenameAndCopy
 
-DESCRIPTION
-This script processes completed downloads from qBittorrent by:
+[![PowerShell Version](https://img.shields.io/badge/PowerShell-5.0+-blue.svg)](https://github.com/PowerShell/PowerShell)
 
-1. CLEANING FILENAMES - Removes junk like release groups, codecs (x264/HEVC), 
-   resolutions (1080p/4K), audio tags (DTS/AC3), and language markers using a 
-   configurable ShitList that learns over time. 
+Automated media processor that cleans, renames, and organizes downloaded video files into a structured library. Designed for qBittorrent integration.
 
-2. DETECTING CONTENT TYPE - Identifies whether a file is:
-   - Movie (standard film)
-   - TV Series (contains S02E03, 2x03, or Season/Episode patterns)
-   - Hindi/Bollywood (based on keywords like hindi, desi, bollywood)
+## Features
 
-3. EXTRACTING METADATA - Pulls title and year from filenames, and for TV shows,
-   parses season and episode numbers.
+- **Smart Filename Cleaning** - Removes release groups, codecs, resolutions, audio tags, and junk text
+- **Auto-Learning ShitList** - Automatically learns unwanted words from bracket content [like this]
+- **Content Detection** - Automatically identifies Movies, TV Series, and Hindi/Bollywood content
+- **Episode Parsing** - Supports S02E03, 2x03, and Season 2 Episode 3 formats
+- **IMDB Verification** - Optional OMDB API validation to confirm movies exist
+- **Structured Organization** - Creates consistent folder structures
+- **Integrity Validation** - Compares source and destination file sizes after copy
+- **Subtitle Support** - Processes and matches subtitle files (.srt, .sub)
+- **Safety Features** - Mutex locking, SafeRun debug mode, drive restrictions, conflict resolution
 
-4. VERIFYING (OPTIONAL) - Checks OMDB API to confirm movies exist before processing.
+## Requirements
 
-5. ORGANIZING - Copies files to appropriate library folders:
-   - Movies:      F:\Movies\<Year>\Movie Title (Year).ext
-   - TV Series:   F:\Serier\<Series Name>\Season XX\Series Name SXXEXX.ext
-   - Hindi:       F:\Hindi\<Year>\Movie Title (Year).ext
+- PowerShell 5.0 or higher
+- Windows operating system
+- Write access to destination drives (F:, G:) and log directory (D:)
 
-6. VALIDATING - Compares source and destination file sizes to ensure copy integrity.
+## Installation
 
-7. CLEANING UP - Deletes successfully copied source files and moves empty or junk 
-   folders to a ToBeDeleted directory.
+1. Clone or download this script to your desired location:
+D:\Applications\Imdb\IMDBRenameAndCopy.ps1
 
-Safety features include mutex locking (prevents multiple instances), SafeRun debug mode 
-(simulates all operations), drive restrictions (blocks F: drive), and interactive 
-conflict resolution for existing files.
+Create the required directory structure:
+D:\Applications\Imdb\
+F:\Movies\
+F:\Serier\
+F:\Hindi\
+G:\Download\Download\Complete\
+G:\Download\Download\ToBeDeleted\
+(Optional) Create initial ShitList.txt file in D:\Applications\Imdb\
 
-PARAMETER folderPath
-Root folder containing completed downloads to process. Default: G:\Download\Download\Complete
+Usage
+Basic Commands
+Process all downloads in default folder:
 
-PARAMETER UseMetadataTitleFirst
-Reserved parameter for future use. Default: $false
-
-PARAMETER EnableLogging
-Enables logging to error_log.txt. Default: $true
-
-PARAMETER EnableSafeRun
-Debug mode that simulates all operations without modifying files. Default: $false
-
-EXAMPLE
-# Normal execution - process all downloads
+powershell
 .\IMDBRenameAndCopy.ps1
+Process a specific folder:
 
-EXAMPLE
-# Process specific folder
+powershell
 .\IMDBRenameAndCopy.ps1 -folderPath "G:\Download\Complete\MovieName"
+SafeRun debug mode (no files are modified):
 
-EXAMPLE
-# SafeRun debug mode (no files are modified)
+powershell
 .\IMDBRenameAndCopy.ps1 -EnableSafeRun $true
+Disable logging:
 
-EXAMPLE
-# Disable logging, process specific folder
-.\IMDBRenameAndCopy.ps1 -folderPath "G:\Downloads\TVShow" -EnableLogging $false
+powershell
+.\IMDBRenameAndCopy.ps1 -EnableLogging $false
+Parameters
+Parameter	Type	Default	Description
+folderPath	string	G:\Download\Download\Complete	Root folder containing downloads
+UseMetadataTitleFirst	bool	false	Reserved for future use
+EnableLogging	bool	true	Enables logging to error_log.txt
+EnableSafeRun	bool	false	Debug mode (simulates all operations)
+qBittorrent Integration
+Add to qBittorrent:
 
-EXAMPLE
-# qBittorrent completion call (add to qBittorrent "Run external program" on completion)
+Go to Tools → Options → Downloads
+
+Find "Run external program" field
+
+Add this line:
+
+powershell
 powershell -File "D:\Applications\Imdb\IMDBRenameAndCopy.ps1" "%F"
+Folder Structure
+Source (G:) Destination (F:)
 
-NOTES
-Author     : Nadeem Ahmad
-Created    : 2026-03-09
-Purpose    : Automated media library organization for torrent downloads
-ShitList   : Auto-learns unwanted words from bracket content [like this]
-Log file   : D:\Applications\Imdb\error_log.txt
-ShitList   : D:\Applications\Imdb\ShitList.txt
+text
+G:\Download\Complete\              F:\Movies\
+    Movie.2024.1080p\                 2024\
+    TV.Show.S02E03\                   Movie Title (2024).mkv
+    Hindi.Movie.2024\                 
+                                   F:\Serier\
+G:\Download\ToBeDeleted\              TV Show\
+    (junk folders)                    Season 02\
+                                      TV Show S02E03.mkv
+                                      
+                                   F:\Hindi\
+                                      2024\
+                                      Hindi Movie (2024).avi
+Configuration
+ShitList.txt
+Located at: D:\Applications\Imdb\ShitList.txt
 
-To run from qBittorrent on download completion:
-   In qBittorrent → Tools → Options → Downloads → "Run external program"
-   Add: powershell -File "D:\Applications\Imdb\IMDBRenameAndCopy.ps1" "%F"
+Add one unwanted word per line:
+
+text
+# Resolution tags
+1080p
+720p
+4k
+
+# Codec tags
+x264
+x265
+hevc
+
+# Audio tags
+ac3
+dts
+aac
+The script automatically learns new words found in brackets [like this] and adds them to the ShitList.
+
+IMDB Verification
+Edit these variables in the script:
+
+powershell
+$EnableImdbVerification = $true
+$OmdbApiKey = "your_api_key_here"
+$PauseIfImdbNotMatched = $true
+Get a free API key at: http://www.omdbapi.com/apikey.aspx
+
+Safety Features
+Feature	Description
+Mutex Locking	Prevents multiple script instances from running simultaneously
+SafeRun Mode	Performs a full simulation without modifying any files
+Drive Restrictions	Blocks execution on F: drive, warns on non-G: drives
+Copy Validation	Verifies file sizes after copying to ensure integrity
+Interactive Conflicts	Prompts before overwriting existing files
+Item Count Check	Warns when processing more than 20 items
+Logging
+Logs are written to: D:\Applications\Imdb\error_log.txt
+
+Example log output:
+
+text
+2026-03-09 10:30:15 - 🚀 Starting folder processing...
+2026-03-09 10:30:16 - 📂 Processing Folder: G:\Download\Complete\Movie.2024.1080p
+2026-03-09 10:30:17 - 🎬 Movie → Destination: F:\Movies\2024
+2026-03-09 10:30:18 - ✅ Copy verified: Movie Title (2024).mkv
+2026-03-09 10:30:19 - 🗑️ Deleted source file
+2026-03-09 10:30:20 - 🏁 Finished folder processing.
+Troubleshooting
+Issue	Solution
+Script won't run on F: drive	This is intentional for safety. Move source files to G:
+Another instance is running	Wait for current instance to finish or restart system
+IMDB verification fails	Check API key or disable verification in script
+Files not being processed	Verify file extensions are supported (.mp4, .mkv, .avi, etc.)
+Destination folder access denied	Run PowerShell as administrator
+Testing
+Always test with SafeRun mode first:
+
+powershell
+.\IMDBRenameAndCopy.ps1 -EnableSafeRun $true
+Author
+Nadeem Ahmad
+
+Created: 2026-03-09
+
+Purpose: Automated media library organization for torrent downloads
+
+Acknowledgments
+OMDb API for movie verification
+
+qBittorrent for download management
+
+Disclaimer
+This script moves and deletes files. Always test with SafeRun mode first and maintain backups of important data.
+
+text
+
+This should display correctly on GitHub with proper markdown formatting. The key fixes:
+- Removed emojis from headers (some markdown parsers struggle with them)
+- Proper code blocks with triple backticks
+- Clean table formatting
+- Consistent spacing
+- Plain text folder structure using indentation
